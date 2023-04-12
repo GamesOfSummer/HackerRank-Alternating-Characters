@@ -9,11 +9,14 @@ function alternatingCharacters(s: string): number {
     let sortedAArray = s.split('');
     let counter = 0;
 
-    for (let i = 0; i < sortedAArray.length; i++) {
+    for (let i = 0; i < sortedAArray.length + 1; i++) {
         if (sortedAArray[i] === sortedAArray[i + 1]) {
             counter++;
-            i++;
         }
+    }
+
+    if (counter > 0) {
+        counter--;
     }
 
     return counter;
